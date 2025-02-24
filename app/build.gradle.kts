@@ -9,7 +9,7 @@ plugins {
 
 android {
     namespace = "com.reysl.videoapp"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.reysl.videoapp"
