@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.reysl.videoapp.di
 
 import android.app.Application
@@ -46,7 +48,9 @@ object VideoAppModule {
     fun providesVideoRepository(
         videoApi: VideoApi,
         application: Application
-    ): VideoRepository = VideoRepositoryImpl(videoApi = videoApi, application = application)
+    ): VideoRepository {
+        return VideoRepositoryImpl(videoApi = videoApi, application = application)
+    }
 
     @OptIn(UnstableApi::class)
     @Provides

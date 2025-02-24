@@ -27,11 +27,11 @@ class VideoRepositoryImpl @Inject constructor(
 
             emit(Result.Success(videoItems))
         } catch (e: HttpException) {
-            emit(Result.Error(application.getString(R.string.network_error, e.message)))
+            emit(Result.Error(application.getString(R.string.network_error)))
         } catch (e: IOException) {
-            emit(Result.Error(application.getString(R.string.error_input_output, e.message)))
+            emit(Result.Error(application.getString(R.string.error_input_output)))
         } catch (e: Exception) {
-            emit(Result.Error(application.getString(R.string.unknown_error, e.message)))
+            emit(Result.Error(application.getString(R.string.unknown_error)))
         } finally {
             emit(Result.Loading(false))
         }
